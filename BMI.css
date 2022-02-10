@@ -1,0 +1,509 @@
+@font-face {
+  font-family: "Rubik Regular";
+  src: url("Fonts/rubik-cufonfonts-webfont/Rubik-Regular.woff") format("woff");
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Rubik Regular", sans-serif;
+  background-image: #a600ff;
+  background-image: radial-gradient(
+      at 40% 20%,
+      rgb(251, 122, 255) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, rgb(31, 102, 255) 0, transparent 50%),
+    radial-gradient(at 0% 50%, rgb(119, 187, 243) 0, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, rgb(234, 50, 240) 0, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0, transparent 80%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
+}
+
+header {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------------------ menu ---------------------------- */
+
+.dropdown-menu i {
+  margin-right: 0.5rem;
+  color: rgba(197, 2, 93, 0.966);
+  font-size: 1.3rem;
+}
+
+.dropdown-menu a:hover {
+  background-color: #e6cfe6;
+}
+.dropdown-menu a:focus {
+  color: rgb(0, 0, 0);
+}
+
+.search-box {
+  margin-top: 16px;
+  min-width: 200px;
+}
+.search-box input {
+  border: none;
+  background-color: rgb(46, 43, 43);
+}
+.search-box input:focus {
+  background-color: rgb(46, 43, 43);
+  color: white;
+}
+.search-box input:not(:focus) {
+  background-color: rgb(46, 43, 43);
+  color: white;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+.icon-list {
+  padding-top: 3px;
+  margin-right: 30px;
+  margin-left: 20px;
+}
+
+.icon-list a {
+  font-weight: bold;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.search-btn {
+  background: rgba(255, 0, 119, 0.966);
+  box-shadow: 0 8px 32px 0 rgba(0, 2, 26, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 5px;
+}
+
+.search-btn:hover {
+  transition: background-color ease 0.3s;
+  background: rgba(3, 245, 112, 0.966);
+  box-shadow: 0 8px 32px 0 rgba(0, 2, 26, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 5px;
+}
+
+.search-btn:not(:hover) {
+  transition: background-color ease 0.4s;
+  background: rgba(255, 0, 119, 0.966);
+  box-shadow: 0 8px 32px 0 rgba(0, 2, 26, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 5px;
+}
+
+.navbar-light .nav-item:hover .nav-link:not(.disabled),
+.navbar-light .nav-item:hover .nav-link:not(.disabled) > i {
+  color: #df27df;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0 / 80%);
+}
+
+#logo {
+  max-width: 110px;
+  width: 100%;
+  height: auto;
+}
+
+#logo-name {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-right: 4rem;
+  color: black;
+}
+
+.logo-container {
+  padding-right: 0px;
+}
+
+.navbar-toggler {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ============== hamburger menu ============= */
+
+.ham-menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.line {
+  fill: none;
+  stroke: rgb(41, 41, 41);
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+/* ======================================= */
+
+/* --------------------------calculation --------------------------*/
+
+#form {
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  padding: 15px;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bmi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submitBtn {
+  border: none;
+  border-radius: 5px;
+  padding: 7px 20px;
+  display: flex;
+  margin: auto;
+  margin-top: 0.85rem;
+  font-size: large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background: rgba(5, 23, 185, 0.966);
+  box-shadow: 0 8px 32px 0 rgba(0, 2, 26, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+}
+
+#submitBtn:hover {
+  transition: background-color ease 0.3s;
+  background: rgba(224, 3, 106, 0.966);
+  box-shadow: 0 8px 32px 0 rgba(0, 2, 26, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+}
+
+#submitBtn:not(:hover) {
+  transition: background-color ease 0.7s;
+  background: rgba(5, 23, 185, 0.966);
+  box-shadow: 0 8px 32px 0 rgba(0, 2, 26, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+}
+
+.strong {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+#resultContainer {
+  width: 60%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+#result {
+  background: rgba(197, 206, 245, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  padding: 20px;
+  margin: auto;
+  width: 90%;
+  height: 80%;
+  text-align: center;
+  border-radius: 5px;
+  border: rgba(217, 222, 248, 0.35) 5px solid;
+  font-size: larger;
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bmi-guide {
+  margin-top: 50px;
+  padding: 5px;
+}
+
+.bmi-guide p {
+  font-weight: bold;
+}
+
+.bmi-color {
+  min-width: 35px;
+  max-width: 50px;
+  height: 25px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+table td {
+  border: none;
+  font-weight: bold;
+}
+
+#underweight {
+  background-color: orange;
+}
+#healthyweight {
+  background-color: green;
+}
+#overweight {
+  background-color: red;
+}
+
+/*----------------------------- aside ------------------------------*/
+
+.aside-container {
+  margin: 1rem 0 2rem 0;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  border-radius: 10px;
+}
+
+.aside-article {
+  margin: 1.2rem 0.8rem -2.5rem 0.8rem;
+  padding: 0.5rem;
+  color: rgb(0, 0, 0);
+  line-height: 1.7rem;
+  font-size: normal;
+  padding: 1rem;
+  background: rgba(196, 46, 226, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+}
+
+#bmi-img {
+  width: 100%;
+  height: auto;
+  padding: 5rem 2rem 0 2rem;
+}
+
+.feature {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+}
+
+.js-img {
+  margin-top: -10px;
+}
+
+.mobile-img {
+  margin-top: -2.8px;
+}
+
+/* ----------------------------- footer ------------------------------- */
+
+footer {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.footer-container {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  border-radius: 10px;
+}
+
+path {
+  fill: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+}
+
+.footer-items ul {
+  line-height: 2rem;
+}
+
+.footer-items h5 {
+  border-bottom: 3px solid white;
+  border-radius: 3px;
+  padding-bottom: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+#right-reserve {
+  background-color: #281ae669;
+  padding: 20px 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* ---------------------------- media ----------------------------------- */
+
+@media screen and (max-width: 991px) {
+  #bmi-img {
+    max-width: 100%;
+    width: 60%;
+    height: auto;
+    margin: auto auto 20px auto;
+    display: flex;
+  }
+  #form {
+    margin-bottom: 5rem;
+  }
+  nav {
+    scroll-behavior: auto;
+  }
+  .dropdown-menu {
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav-item {
+    background: rgba(58, 250, 106, 0.555);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    overflow: hidden;
+  }
+
+  #form {
+    width: 90%;
+  }
+
+  #logo {
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+  }
+
+  #logo-name {
+    font-size: 1.5rem;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.1em;
+    height: 1.1em;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  #logo {
+    max-width: 65px;
+    width: 100%;
+    height: auto;
+  }
+  #logo-name {
+    font-size: 1.2rem;
+    margin-right: 2.1rem;
+  }
+  .navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #bmi-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: auto auto 20px auto;
+    padding: 5rem 5rem 0 5rem;
+    display: flex;
+  }
+}
