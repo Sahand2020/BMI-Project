@@ -364,6 +364,11 @@ table td {
   padding: 5rem 2rem 0 2rem;
 }
 
+.article-description {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .feature {
   width: 100%;
   height: auto;
