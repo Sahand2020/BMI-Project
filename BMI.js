@@ -15,7 +15,7 @@ function BMI(e) {
   resValue.innerHTML = finalResult;
 
   if (finalResult < 18.5) {
-    resValue.style.borderColor = "orange";
+    resValue.style.borderColor = "yellow";
   } else if (finalResult > 25) {
     resValue.style.borderColor = "red";
   } else {
