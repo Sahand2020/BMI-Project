@@ -45,6 +45,10 @@ li {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*------------------------------ menu ---------------------------- */
 
 .dropdown-menu i {
@@ -414,6 +418,15 @@ path {
   border-bottom: 3px solid white;
   border-radius: 3px;
   padding-bottom: 1rem;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  font-weight: bold;
+  color: black;
 }
 
 textarea {
